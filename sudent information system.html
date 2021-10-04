@@ -1,0 +1,160 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation()
+
+{
+if(document.f1.name.value=="")
+{
+window.alert("Plz Enter Your Name");
+return false;
+}
+
+{
+else if(document.f1.dob.value=="")
+{
+window.alert("Plz Enter Your date of brith");
+return false;
+}
+
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your E-mail:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1)
+{
+window.alert("Plz Enter Your Valid E-mail:");
+return false;
+}
+
+else if(document.f1.phonenumber.value=="")
+{
+window.alert("plz enter the phone number");
+return false;
+}
+
+else if(document.f1.addr.value=="")
+{
+window.alert("Plz Enter Your Address");
+return false;
+}
+
+else if(document.f1.country.selectedIndex==0)
+{
+window.alert("Plz Select Your Country");
+return false;
+}
+
+
+else
+if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false))
+{
+window.alert("Plz choose Your Gender");
+return false;
+}
+else
+if((document.f1.college[0].checked==false)&&(document.f1.college[1].checked==false))
+{
+window.alert("Plz choose Your college");
+return false;
+}
+
+else
+if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&
+(document.f1.chk[2].checked==false)&&(document.f1.chk[3].checked==false))
+{
+window.alert("Plz choose Your Qualification");
+return false;
+}
+
+else if(document.f1.course.value=="")
+{
+window.alert("Plz Enter Your course");
+return false;
+}
+
+else if(document.f1.year.value=="")
+{
+window.alert("Plz Enter Your current year");
+return false;
+}
+
+else
+return true;
+}
+</script>
+</head>
+
+<body bgcolor="Orange">
+
+<center><img src="C:\Users\3it18\Desktop\sns.jpg"></center>
+
+<h3 style="text-align:center">student information system</h3>
+<form name="f1" action="Register.html" onsubmit="return validation()">
+<fieldset>
+<legend>Registeration Form</legend> <br/>
+
+<table border="1">
+
+
+
+
+
+
+<tr><td>Name:</td><td><input type="text" name="name"></td></tr>
+
+<tr><td>date of brith:</td><td><input type="date" name="dob"></td></tr>
+
+<tr><td>E-mail:</td><td><input type="text" name="email" size="31"></td></tr>
+
+<tr><td>phone number:</td><td><input type="text" name="phonenumber" size="10"></td></tr>
+
+<tr><td>Address:</td><td><Textarea name="addr" rows="5" COls="25"></Textarea></td></tr>
+<tr>
+<td>Country:</td>
+<td><select name ="country">
+<option>---Select Your Country---</option>
+<option>India</option>
+<option>China</option>
+<option>Nepal</option>
+<option>Myanmmar</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="rdo">Male
+<input type="radio" name="rdo">Female 
+<input type="radio" name="rdo">Transgender
+</td>
+</tr>
+
+<tr>
+<td>college:</td>
+<td>
+<input type="radio" name="college">SNSCE
+<input type="radio" name="college">SNSCT
+</td>
+</tr>
+
+<tr>
+<td>Qualification:</td> <td>
+<input type="checkbox" name="chk">B.E
+<input type="checkbox" name="chk">M.E
+<input type="checkbox" name="chk">Ph.D.
+<input type="checkbox" name="chk">B.Tech
+</td>
+</tr>
+
+<tr><td>course:</td><td><input type="text" name="course" size="15"></td></tr>
+
+<tr><td>current year:</td><td><input type="text" name="year" size="4"></td></tr>
+
+</table> <br/>
+<input type="submit" value="Register"></fieldset> 
+</form> 
+</body>
+</html>
